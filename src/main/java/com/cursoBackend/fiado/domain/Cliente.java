@@ -5,6 +5,8 @@ import java.util.Objects;
 import java.util.UUID;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -16,6 +18,7 @@ public class Cliente implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private UUID id;
 	
 	private String nome;
@@ -32,9 +35,8 @@ public class Cliente implements Serializable {
 
 	}
 
-	public Cliente(UUID id, String nome, String documento, String telefone, String rua, int numero) {
+	public Cliente( String nome, String documento, String telefone, String rua, int numero) {
 		super();
-		this.id = id;
 		this.nome = nome;
 		this.documento = documento;
 		this.telefone = telefone;
