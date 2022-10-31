@@ -44,7 +44,7 @@ public class ComprasFiadasController {
 		if (clienteServices.findById(compra.getClienteId()).isPresent()) {
 
 		}
-		if (estabelecimentoServices.findById(compra.getEstabelecimentoId())) {
+		if (estabelecimentoServices.findById(compra.getEstabelecimentoId()).isPresent()) {
 
 		}
 
